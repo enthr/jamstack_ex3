@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-size: 16px;
+                font-family: serif;
+                padding: 10em 20em;
+                height: 100vh;
+                background: linear-gradient(to right top, rgb(255, 255, 0), rgb(255, 255, 255));
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                background: linear-gradient(to right top, rgb(0, 255, 255), rgb(255, 255, 0));
+                clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            }
+
+            .title {
+                font-size: 3rem;
+            }
+
+            .vibe {
+                font-size: 2rem;
+            }
+
+            .love {
+                font-size: 5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="/">Your Page</a> | <a href="/about">About This Page of Yours</a>
+        </header>
+        {{content | safe}}
+    </body>
+
+</html>
